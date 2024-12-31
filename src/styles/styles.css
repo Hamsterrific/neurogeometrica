@@ -37,6 +37,15 @@ body {
   margin: 8rem auto;
 }
 
+.about-list {
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}
+
+.about > p {
+  margin-bottom: 2rem;
+}
+
 .link-mail {
   color: #e5fff2;
 }

@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  color: #e5fff2;
+  background-color: #135977;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.content {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin: 4rem 0;
+}
+
+.about {
+  margin: 10rem 0;
+}
+
+.link-mail {
+  color: #e5fff2;
+}
+
+.link-mail:hover {
+  font-weight: bold;
+}
+
+.link-mail:focus {
+  outline: 2px solid #e5fff2;
+  outline-offset: 2px;
+}
+
+/* TITLES */
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.6;
+  margin: 5rem 0 6.4rem 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+/* JOB SECTION */
+
+.job-content {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.job-button {
+  background-color: #0f485e;
+  color: #e5fff2;
+  border: none;
+  padding: 2rem 5rem;
+  margin: 3rem 0;
+  border-radius: 22px;
+  font-size: 2.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.job-button:hover {
+  transform: translateY(-2px);
+}
+
+.job-button:active {
+  background-color: #0f3850;
+  transform: translateY(0);
+}
+
+.job-button:focus {
+  outline: 2px solid #e5fff2;
+  outline-offset: 2px;
+}
+
+.job-list {
+  line-height: 4rem;
+}
+
+.job-block {
+  margin: 2.4rem 0;
+}
+
+.job-block li {
+  margin: 0.8rem;
+}
+
+/* NAVBAR */
+
+.navbar-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 2rem;
+  background-color: #0f485e;
+  gap: 6rem;
+  position: relative;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 6rem;
+  font-size: 3.2rem;
+}
+
+.navbar-links a {
+  color: #e5fff2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffffff;
+}
+
+/* Burger Menu */
+
+.burger-container {
+  display: none;
+  position: relative;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  color: #e5fff2;
+}
+
+.burger-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 3rem;
+  color: #e5fff2;
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1001;
+}
+
+.burger-button:focus {
+  outline: 2px solid #e5fff2;
+  outline-offset: 2px;
+}
+
+.burger-links {
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f485e;
+  padding: 5rem 3rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.burger-links li {
+  list-style: none;
+}
+
+.burger-links.active {
+  display: flex;
+  transform: translateY(0);
+}
+
+.burger-links li:last-child {
+  border-bottom: none;
+}
+
+.burger-links li a {
+  color: #e5fff2;
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 12px 12px;
+  text-decoration: none;
+}
+
+.burger-links li a:hover {
+  color: #ffffff;
+}
+
+/* -------------------------
+   Responsive Styles
+------------------------- */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .burger-container {
+    display: none;
+  }
+
+  .job-button {
+    padding: 2rem 2rem;
+    margin: 2rem 0;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .burger-container {
+    display: flex;
+  }
+
+  .navbar-container {
+    display: none;
+  }
+
+  .content {
+    margin: 4rem 0;
+  }
+
+  .job-button {
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+  }
+
+  h1 {
+    line-height: 1.2;
+  }
+}

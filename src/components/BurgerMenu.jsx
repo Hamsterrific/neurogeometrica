@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../assets/images/logo-40.png';
+import logo from '../assets/images/logo-45.png';
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +41,7 @@ const BurgerMenu = () => {
         </ul>
 
         <button
+          type='button'
           className='burger-button'
           onClick={toggleMenu}
           aria-label='Toggle menu'

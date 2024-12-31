@@ -26,11 +26,15 @@ body {
 .content {
   font-size: 2rem;
   line-height: 1.6;
-  margin: 4rem 0;
+  margin: 2rem 0;
+}
+
+.content-block {
+  margin-bottom: 2em;
 }
 
 .about {
-  margin: 10rem 0;
+  margin: 8rem auto;
 }
 
 .link-mail {
@@ -79,7 +83,6 @@ h2 {
   font-size: 2.6rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .job-button:hover {
@@ -88,7 +91,6 @@ h2 {
 
 .job-button:active {
   background-color: #0f3850;
-  transform: translateY(0);
 }
 
 .job-button:focus {
@@ -108,7 +110,19 @@ h2 {
   margin: 0.8rem;
 }
 
+.job-details {
+  background-color: #0f485e;
+  color: #e5fff2;
+  padding: 1rem 4rem 2rem 4rem;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
 /* NAVBAR */
+
+.logo-image {
+  margin: 1rem;
+}
 
 .navbar-container {
   display: flex;
@@ -212,9 +226,7 @@ h2 {
   color: #ffffff;
 }
 
-/* -------------------------
-   Responsive Styles
-------------------------- */
+/* Responsive Styles */
 
 /* Tablet */
 
@@ -226,6 +238,10 @@ h2 {
   .job-button {
     padding: 2rem 2rem;
     margin: 2rem 0;
+  }
+
+  .about {
+    margin: 4rem 3rem;
   }
 }
 
@@ -241,7 +257,7 @@ h2 {
   }
 
   .content {
-    margin: 4rem 0;
+    margin: 0;
   }
 
   .job-button {
@@ -251,5 +267,10 @@ h2 {
 
   h1 {
     line-height: 1.2;
+    margin: 2rem 0 3rem 0;
+  }
+
+  .about {
+    margin: 1rem;
   }
 }

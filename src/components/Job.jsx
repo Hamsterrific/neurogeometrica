@@ -17,9 +17,16 @@ const Job = ({ listing }) => {
 
   return (
     <div className='job-content'>
-      <button className='job-button' aria-label='Show job' onClick={toggleDetails}>{title} ↓</button>
+      <button
+        className='job-button'
+        aria-label='Show job'
+        type='button'
+        onClick={toggleDetails}
+      >
+        {title} {isOpen ? '↑' : '↓'}
+      </button>
       {isOpen && (
-        <>
+        <div className='job-details'>
           <div className='job-block'>
             <h2>Location:</h2>
             {location}
@@ -76,11 +83,14 @@ const Job = ({ listing }) => {
             </div>
             <p>
               Please send your resume, a brief cover letter, and links to any
-              relevant projects or publications to <a className='link-mail' href='mailto:neurogeometrica@gmail.com'>neurogeometrica@gmail.com</a>. We
-              look forward to hearing from you!
+              relevant projects or publications to{' '}
+              <a className='link-mail' href='mailto:neurogeometrica@gmail.com'>
+                neurogeometrica@gmail.com
+              </a>
+              . We look forward to hearing from you!
             </p>
           </div>
-        </>
+        </div>
       )}
     </div>
   );
